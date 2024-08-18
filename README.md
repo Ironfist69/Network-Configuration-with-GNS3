@@ -6,3 +6,8 @@ This project demonstrates a basic network design and configuration using Cisco I
 - Implement basic IP addressing and subnetting.
 - Set up static routing between routers.
 - Configure VLANs and perform Inter-VLAN routing on switches.
+## Utilities used
+- GNS3
+- HyperV (For GNS3-VM)
+- Cisco IOSv
+- PuTTY
