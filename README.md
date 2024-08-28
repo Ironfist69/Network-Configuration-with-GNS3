@@ -4,8 +4,6 @@ This project demonstrates a basic network design and configuration using Cisco I
 ## Objectives
 - Design and configure a small network topology with 3 Ubuntu docker containers, 2 Switches and a single Router.
 - Implement basic IP addressing and subnetting.
-- Set up static routing between routers.
-- 
 ## Utilities used
 - GNS3
 - HyperV (For GNS3-VM)
