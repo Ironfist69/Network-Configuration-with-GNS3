@@ -53,24 +53,35 @@ For a basic setup, we use 3 Ubuntu Docker containers, 2 Switches and 1 Router
 
 - Open console for Ubuntu-Docker-1
 
-```ip addr add 192.168.0.10/24``` <br>
-```ip link set dev eth0 up``` <br>
-```ip route add default via 192.168.0.1```
+```sh
+ip addr add 192.168.0.10/24
+ip link set dev eth0 up
+ip route add default via 192.168.0.1
+```
 
 ![Screenshot 2024-08-28 123615](https://github.com/user-attachments/assets/13e5e6b2-95d8-431d-af97-dd988af428c0)
 
 - Open console for Ubuntu-Docker-2
 
-```ip addr add 192.168.0.20/24``` <br>
-```ip link set dev eth0 up``` <br>
-```ip route add default via 192.168.0.1```
+```sh
+ip addr add 192.168.0.20/24
+ip link set dev eth0 up
+ip route add default via 192.168.0.1
+```
 
 ![Screenshot 2024-08-28 135151](https://github.com/user-attachments/assets/07ba4112-7cec-4fc5-9ce0-2188d41d8ba4)
 
 - Open console for Ubuntu-Docker-3
 
-```ip addr add 192.168.0.30/24``` <br>
-```ip link set dev eth0 up``` <br>
-```ip route add default via 192.168.0.1```
-
+```sh
+ip addr add 192.168.0.30/24
+ip link set dev eth0 up
+ip route add default via 192.168.0.1
+```
 ![Screenshot 2024-08-28 140021](https://github.com/user-attachments/assets/d932858d-601f-459d-be99-bb1dcc2b0dbd)
+
+### Step 4: Pinging devices
+
+```sh
+ping 192.168.0.20
+```
