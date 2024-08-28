@@ -60,31 +60,30 @@ wr
 - Open console for Ubuntu-Docker-1
 
 ```sh
-ip addr add 192.168.0.10/24
+ip addr add 192.168.1.2/24 dev eth0
 ip link set dev eth0 up
-ip route add default via 192.168.0.1
+route add default gw 192.168.1.1 dev eth0
 ```
-
-![Screenshot 2024-08-28 123615](https://github.com/user-attachments/assets/13e5e6b2-95d8-431d-af97-dd988af428c0)
+![Screenshot 2024-08-28 170113](https://github.com/user-attachments/assets/dba0f14b-db55-42ac-9a6f-fb90b967056f)
 
 - Open console for Ubuntu-Docker-2
 
 ```sh
-ip addr add 192.168.0.20/24
+ip addr add 192.168.2.2/24 dev eth0
 ip link set dev eth0 up
-ip route add default via 192.168.0.1
+route add default gw 192.168.0.1 dev eth0
 ```
 
-![Screenshot 2024-08-28 135151](https://github.com/user-attachments/assets/07ba4112-7cec-4fc5-9ce0-2188d41d8ba4)
+![Screenshot 2024-08-28 170223](https://github.com/user-attachments/assets/f33e31fd-b302-469a-9cc0-69a4c0b204c5)
 
 - Open console for Ubuntu-Docker-3
 
 ```sh
-ip addr add 192.168.0.30/24
+ip addr add 192.168.2.3/24 dev eth0
 ip link set dev eth0 up
-ip route add default via 192.168.0.1
+route add default gw 192.168.2.1 dev eth0
 ```
-![Screenshot 2024-08-28 140021](https://github.com/user-attachments/assets/d932858d-601f-459d-be99-bb1dcc2b0dbd)
+![Screenshot 2024-08-28 170547](https://github.com/user-attachments/assets/78d09f43-52ad-49b7-98b1-cf17a4167824)
 
 ### Step 4: Pinging devices
 
