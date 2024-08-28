@@ -39,22 +39,23 @@ For a basic setup, we use 3 Ubuntu Docker containers, 2 Switches and 1 Router
 
 - Connect Devices:
 
-![Screenshot 2024-08-28 164014](https://github.com/user-attachments/assets/6a47447b-da2e-4a76-aa3f-a76c4e61f996)
-
+![Screenshot 2024-08-28 165544](https://github.com/user-attachments/assets/29ed5fb1-d82d-473c-b4d7-bf97d9eead36)
 
 ### Step 3: Assigning Static IP address
 - Open console for Router
 
-```enable``` <br>
-```conf t``` <br>
-```int g0/0``` <br>
-```ip address 192.168.1.1 255.255.255.0``` <br>
-```int g0/1``` <br>
-```ip address 192.168.2.1 255.255.255.0``` <br>
-```no shut``` <br>
-```end``` <br>
+```sh
+enable
+conf t
+int g0/0
+ip address 192.168.1.1 255.255.255.0
+int g0/1
+ip address 192.168.2.1 255.255.255.0
+no shut
+end
+wr
+```
 
-![Screenshot 2024-08-28 134019](https://github.com/user-attachments/assets/3a20f91c-514b-4ffe-90e2-6887594b4560)
 
 - Open console for Ubuntu-Docker-1
 
