@@ -29,8 +29,8 @@ The network consists of:
 - Router G0/0 (192.168.1.1)
          G0/1 (192.168.2.1)
 
-## Process
-### Step 1: Create a new project
+# Process
+## Step 1: Create a new project
 Open GNS3 and create a new project by going to File -> New Project
 ### Step 2: Design the Network Topology
 
@@ -41,7 +41,7 @@ For a basic setup, we use 3 Ubuntu Docker containers, 2 Switches and 1 Router
 
 ![Screenshot 2024-08-28 165544](https://github.com/user-attachments/assets/29ed5fb1-d82d-473c-b4d7-bf97d9eead36)
 
-### Step 3: Assigning Static IP address
+## Step 3: Assigning Static IP address
 - Open console for Router
 
 ```sh
@@ -85,7 +85,7 @@ route add default gw 192.168.2.1 dev eth0
 ```
 ![Screenshot 2024-08-28 170547](https://github.com/user-attachments/assets/78d09f43-52ad-49b7-98b1-cf17a4167824)
 
-### Step 4: Pinging devices
+## Step 4: Testing Connectivity
 
 From Ubuntu-Docker-1 to Ubuntu-Docker-3
 ```sh
