@@ -87,6 +87,10 @@ route add default gw 192.168.2.1 dev eth0
 
 ### Step 4: Pinging devices
 
+From Ubuntu-Docker-1 to Ubuntu-Docker-3
 ```sh
-ping 192.168.0.20
+ping 192.168.2.3
 ```
+Output:
+
+![Screenshot 2024-08-28 170816](https://github.com/user-attachments/assets/df98f711-9a9b-48b1-98cb-609aba1bb0fb)
