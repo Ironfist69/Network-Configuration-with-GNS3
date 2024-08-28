@@ -37,22 +37,26 @@ For a basic setup, we use 2 Ubuntu Docker containers, 2 Switches and 1 Router
 
 ![Screenshot 2024-08-28 121107](https://github.com/user-attachments/assets/51f45120-0c6b-4642-b40a-698e30bcdf5e)
 
-### Step 3: Assigning IP address
-- Open console for Ubuntu-Docker-1
-
-```ip addr add 192.168.10.2/24``` <br>
-```ip link set dev eth0 up``` <br>
-```ip route add default via 192.168.10.1```
-
-![Screenshot 2024-08-28 123615](https://github.com/user-attachments/assets/13e5e6b2-95d8-431d-af97-dd988af428c0)
-
-- Open console for Switch-1
+### Step 3: Assigning Static IP address
+- Open console for Router
   
 ```enable``` <br>
 ```conf t``` <br>
-```int vlan 1``` <br>
-```ip address 192.168.10.1``` <br>
+```int g0/0``` <br>
+```ip address 192.168.0.1 255.255.255.0``` <br>
+```no shut``` <br>
+```end``` <br>
 
-![Screenshot 2024-08-28 131049](https://github.com/user-attachments/assets/5d3d7776-1ed4-4958-acb5-cb597e4ac4a2)
+![Screenshot 2024-08-28 134019](https://github.com/user-attachments/assets/3a20f91c-514b-4ffe-90e2-6887594b4560)
+
+- Open console for Ubuntu-Docker-1
+
+```ip addr add 192.168.0.10/24``` <br>
+```ip link set dev eth0 up``` <br>
+```ip route add default via 192.168.0.1```
+
+![Screenshot 2024-08-28 123615](https://github.com/user-attachments/assets/13e5e6b2-95d8-431d-af97-dd988af428c0)
+
+
 
 
