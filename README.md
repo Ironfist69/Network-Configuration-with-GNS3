@@ -55,7 +55,7 @@ no shut
 end
 wr
 ```
-
+![Screenshot 2024-08-28 165923](https://github.com/user-attachments/assets/58a84d75-b6d2-474a-b00b-89817abb9bb1)
 
 - Open console for Ubuntu-Docker-1
 
