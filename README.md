@@ -37,7 +37,7 @@ For a basic setup, we use 3 Ubuntu Docker containers, 2 Switches and 1 Router
 
 - Connect Devices:
 
-![Screenshot 2024-08-28 121107](https://github.com/user-attachments/assets/51f45120-0c6b-4642-b40a-698e30bcdf5e)
+![Screenshot 2024-08-28 140052](https://github.com/user-attachments/assets/f2a4a5aa-287a-44ab-b275-c262c01a6af9)
 
 ### Step 3: Assigning Static IP address
 - Open console for Router
@@ -73,3 +73,4 @@ For a basic setup, we use 3 Ubuntu Docker containers, 2 Switches and 1 Router
 ```ip link set dev eth0 up``` <br>
 ```ip route add default via 192.168.0.1```
 
+![Screenshot 2024-08-28 140021](https://github.com/user-attachments/assets/d932858d-601f-459d-be99-bb1dcc2b0dbd)
