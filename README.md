@@ -2,7 +2,7 @@
 ## Overview
 This project demonstrates a basic network design and configuration using Cisco IOSv in GNS3. The setup includes configuring IP addressing, static routing, VLANs, and Inter-VLAN routing in a simulated environment. This will help us understand and implement fundamental networking concepts using GNS3 in a Virtualized Environment.
 ## Objectives
-- Design and configure a small network topology with 2 Ubuntu docker containers, 2 Switches and a single Router.
+- Design and configure a small network topology with 3 Ubuntu docker containers, 2 Switches and a single Router.
 - Implement basic IP addressing and subnetting.
 - Set up static routing between routers.
 - 
@@ -16,14 +16,16 @@ The network consists of:
 ### 2 Ubuntu Docker Container
 - Ubuntu-Docker-1
 - Ubuntu-Docker-2
+- Ubuntu-Docker-3
 ### 2 Switches
 - Switch-1
 - Switch-2
 ### 1 Router
 - Router
 ## IP Addressing Scheme
-- Ubuntu-Docker-1: 192.168.10.2/24 (Interface connected to Switch1)
-- Ubuntu-Docker-2: 192.168.20.2/24 (Interface connected to Switch1)
+- Ubuntu-Docker-1: 192.168.0.10/24 (Interface connected to Switch1)
+- Ubuntu-Docker-2: 192.168.0.20/24 (Interface connected to Switch2)
+- Ubuntu-Docker-3: 192.168.0.30/24 (Interface connected to Switch2)
 
 ## Process
 ### Step 1: Create a new project
@@ -31,7 +33,7 @@ Open GNS3 and create a new project by going to File -> New Project
 ### Step 2: Design the Network Topology
 
 - Add Devices:
-For a basic setup, we use 2 Ubuntu Docker containers, 2 Switches and 1 Router
+For a basic setup, we use 3 Ubuntu Docker containers, 2 Switches and 1 Router
 
 - Connect Devices:
 
@@ -65,5 +67,9 @@ For a basic setup, we use 2 Ubuntu Docker containers, 2 Switches and 1 Router
 
 ![Screenshot 2024-08-28 135151](https://github.com/user-attachments/assets/07ba4112-7cec-4fc5-9ce0-2188d41d8ba4)
 
+- Open console for Ubuntu-Docker-3
 
+```ip addr add 192.168.0.30/24``` <br>
+```ip link set dev eth0 up``` <br>
+```ip route add default via 192.168.0.1```
 
