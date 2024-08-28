@@ -23,9 +23,11 @@ The network consists of:
 ### 1 Router
 - Router
 ## IP Addressing Scheme
-- Ubuntu-Docker-1: 192.168.0.10/24 (Interface connected to Switch1)
-- Ubuntu-Docker-2: 192.168.0.20/24 (Interface connected to Switch2)
-- Ubuntu-Docker-3: 192.168.0.30/24 (Interface connected to Switch2)
+- Ubuntu-Docker-1: 192.168.1.2/24 (Interface connected to Switch1)
+- Ubuntu-Docker-2: 192.168.2.2/24 (Interface connected to Switch2)
+- Ubuntu-Docker-3: 192.168.2.3/24 (Interface connected to Switch2)
+- Router G0/0 (192.168.1.1)
+         G0/1 (192.168.2.1)
 
 ## Process
 ### Step 1: Create a new project
@@ -37,15 +39,18 @@ For a basic setup, we use 3 Ubuntu Docker containers, 2 Switches and 1 Router
 
 - Connect Devices:
 
-![Screenshot 2024-08-28 140052](https://github.com/user-attachments/assets/f2a4a5aa-287a-44ab-b275-c262c01a6af9)
+![Screenshot 2024-08-28 164014](https://github.com/user-attachments/assets/6a47447b-da2e-4a76-aa3f-a76c4e61f996)
+
 
 ### Step 3: Assigning Static IP address
 - Open console for Router
-  
+
 ```enable``` <br>
 ```conf t``` <br>
 ```int g0/0``` <br>
-```ip address 192.168.0.1 255.255.255.0``` <br>
+```ip address 192.168.1.1 255.255.255.0``` <br>
+```int g0/1``` <br>
+```ip address 192.168.2.1 255.255.255.0``` <br>
 ```no shut``` <br>
 ```end``` <br>
 
