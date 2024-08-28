@@ -53,3 +53,6 @@ For a basic setup, we use 2 Ubuntu Docker containers, 2 Switches and 1 Router
 ```int vlan 1``` <br>
 ```ip address 192.168.10.1``` <br>
 
+![Screenshot 2024-08-28 131049](https://github.com/user-attachments/assets/5d3d7776-1ed4-4958-acb5-cb597e4ac4a2)
+
+
