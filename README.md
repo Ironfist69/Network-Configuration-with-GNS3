@@ -11,7 +11,7 @@ This project demonstrates a basic network design and configuration using Cisco I
 - PuTTY
 ## Network Topology
 The network consists of:
-### 2 Ubuntu Docker Container
+### 3 Ubuntu Docker Containers
 - Ubuntu-Docker-1
 - Ubuntu-Docker-2
 - Ubuntu-Docker-3
